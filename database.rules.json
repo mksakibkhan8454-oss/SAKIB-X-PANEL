@@ -1,0 +1,65 @@
+{
+  "rules": {
+    "admins": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid && newData.val() === true && (!root.child('admins').hasChildren() || data.val() === true)"
+      }
+    },
+    "categories": {
+      ".read": true,
+      "$id": {
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "products": {
+      ".read": true,
+      "$id": {
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (root.child('admins').child(auth.uid).val() === true || (auth.uid === $uid && (!data.exists() ? newData.child('balance').val() === 0 : newData.child('balance').val() <= data.child('balance').val())))",
+        ".validate": "newData.hasChildren(['email','status'])"
+      }
+    },
+    "orders": {
+      "$id": {
+        ".read": "auth != null && (data.child('userId').val() === auth.uid || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('userId').val() === auth.uid && newData.child('amount').val() <= root.child('users').child(auth.uid).child('balance').val()))",
+        ".validate": "newData.hasChildren(['userId','amount','status'])"
+      }
+    },
+    "topupRequests": {
+      "$id": {
+        ".read": "auth != null && (data.child('userId').val() === auth.uid || root.child('admins').child(auth.uid).val() === true)",
+        ".write": "auth != null && (root.child('admins').child(auth.uid).val() === true || (!data.exists() && newData.child('userId').val() === auth.uid && newData.child('status').val() === 'Processing'))",
+        ".validate": "newData.hasChildren(['userId','amount','status','method','transactionId']) && newData.child('amount').isNumber() && newData.child('amount').val() > 0"
+      }
+    },
+    "transactions": {
+      "$id": {
+        ".read": "auth != null && root.child('admins').child(auth.uid).val() === true",
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "paymentSettings": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+    },
+    "adminOrderHistory": {
+      ".read": "auth != null && root.child('admins').child(auth.uid).val() === true",
+      "$id": {
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    },
+    "adminTopupHistory": {
+      ".read": "auth != null && root.child('admins').child(auth.uid).val() === true",
+      "$id": {
+        ".write": "auth != null && root.child('admins').child(auth.uid).val() === true"
+      }
+    }
+  }
+}

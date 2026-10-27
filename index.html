@@ -1,0 +1,277 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SAKIB X PANEL</title>
+<style>
+:root{--bg:#070a10;--card:#111722;--card2:#171f2d;--text:#f5f7fb;--muted:#9aa6ba;--accent:#7c5cff;--green:#19c995;--danger:#ff5577;--border:#263044}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#21194a 0,#070a10 42%);color:var(--text);font:14px Inter,system-ui,Arial}button,input,select{font:inherit}.hidden{display:none!important}.wrap{max-width:1180px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:24px}.logo{font-size:25px;font-weight:900}.logo b{color:var(--accent)}.userbox{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--green));font-weight:900}.btn{border:0;border-radius:11px;padding:11px 15px;background:linear-gradient(135deg,var(--accent),#a14cff);color:#fff;font-weight:800;cursor:pointer}.btn.secondary{background:#1b2433}.btn.green{background:#118867}.btn.danger{background:#c83d5b}.auth{min-height:100vh;display:grid;place-items:center;padding:20px}.auth .box{width:min(430px,100%);background:#101722eF;border:1px solid var(--border);border-radius:20px;padding:30px;box-shadow:0 25px 80px #0008}.sub,.muted{color:var(--muted)}label{display:block;margin:14px 0 7px;color:#bdc6d7}input,select{width:100%;padding:12px;background:#0b1018;color:var(--text);border:1px solid var(--border);border-radius:11px;outline:0}input:focus,select:focus{border-color:var(--accent)}.msg{padding:11px;border-radius:10px;margin-top:13px}.err{background:#321522;color:#ff9bb0;border:1px solid #5b2335}.ok{background:#0d3028;color:#8ff0d0;border:1px solid #1b604f}.modal{position:fixed;inset:0;background:rgba(2,5,10,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:grid;place-items:center;padding:18px;z-index:9000}.modal .box{width:min(430px,100%);background:rgba(16,23,34,.94);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px;box-shadow:0 30px 100px #0009;animation:modalIn .25s ease}@keyframes modalIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}.hero{padding:22px;border:1px solid var(--border);background:linear-gradient(135deg,#15172b,#101722);border-radius:20px;margin-bottom:20px}.cats{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0 20px}.cat{border:1px solid var(--border);background:#111826;color:#cbd4e5;border-radius:999px;padding:8px 13px;cursor:pointer}.cat.active{background:var(--accent);color:#fff;border-color:var(--accent)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}.product img{width:100%;height:160px;object-fit:cover;background:#0c1119}.pbody{padding:14px}.price{font-size:20px;font-weight:900;margin:8px 0}.tag{font-size:11px;padding:4px 8px;border-radius:999px;background:#202a3d;color:#bdc9ff}.row{display:flex;justify-content:space-between;gap:8px;align-items:center}.empty{padding:35px;text-align:center;color:var(--muted);border:1px dashed var(--border);border-radius:15px}.panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:20px}.orders table{width:100%;border-collapse:collapse}.orders th,.orders td{padding:11px;border-bottom:1px solid var(--border);text-align:left}.toast{position:fixed;right:22px;bottom:22px;min-width:300px;max-width:calc(100vw - 44px);display:flex;align-items:center;gap:12px;background:rgba(16,23,34,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.12);padding:13px 15px;border-radius:15px;box-shadow:0 24px 70px rgba(0,0,0,.5);z-index:9999;animation:toastIn .28s ease}.toast .ico{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#a14cff);font-size:17px;flex:0 0 auto}.toast .ttext{font-weight:700;line-height:1.35}.toast .close{margin-left:auto;border:0;background:transparent;color:#aeb8c9;cursor:pointer;font-size:18px}.historyBox{width:min(1050px,100%);max-height:82vh;overflow:hidden}.historyScroll{max-height:62vh;overflow:auto;margin-top:12px}.balanceChip{display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:14px;backdrop-filter:blur(14px)}.balanceChip b{color:#8ff0d0}.methodCard{border:1px solid var(--border);background:#111826;color:#fff;border-radius:15px;padding:15px;text-align:left;cursor:pointer;transition:.2s}.methodCard:hover,.methodCard.active{border-color:var(--accent);background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(25,201,149,.08));transform:translateY(-1px)}.stepDot{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;background:#1b2433;margin-right:7px}.stepDot.active{background:var(--accent)}.toast .bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:linear-gradient(90deg,var(--accent),var(--green));transform-origin:left;animation:toastBar 2.6s linear forwards;border-radius:0 0 15px 15px}@keyframes toastIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}@keyframes toastBar{to{transform:scaleX(0)}}@media(max-width:900px){.products{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.products{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start}.userbox span{display:none}.wrap{padding:13px}.product img{height:135px}}@media(max-width:420px){.products{grid-template-columns:1fr}.hero{padding:16px}}
+.historyGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:4px}.orderCard{background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}.orderCard .ocHead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.orderCard .ocTitle{font-weight:900;font-size:15px}.orderCard .ocId{font-size:11px;color:#7f8ba0;margin-top:3px}.orderCard .status{font-size:11px;padding:5px 9px;border-radius:999px;background:rgba(124,92,255,.14);color:#c7baff;border:1px solid rgba(124,92,255,.25)}.orderCard .ocGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.orderCard .ocItem{padding:9px 10px;border-radius:12px;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.06)}.orderCard .ocLabel{font-size:10px;color:#7f8ba0;text-transform:uppercase;letter-spacing:.06em}.orderCard .ocValue{margin-top:3px;font-weight:800;word-break:break-word}.orderCard .access{margin-top:10px;display:grid;gap:8px}.orderCard .accessRow{display:flex;justify-content:space-between;gap:10px;padding:9px 10px;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.10),rgba(25,201,149,.06));border:1px solid rgba(255,255,255,.07)}.orderCard .accessRow b{color:#e8eaff}.historyEmpty{padding:40px 20px;text-align:center;color:#9aa6ba}.historyScroll{max-height:72vh!important}.historyBox{width:min(900px,100%)!important}@media(max-width:700px){.historyGrid{grid-template-columns:1fr}.historyBox{padding:17px!important}}.countdownItem{grid-column:span 2}.countdownItem .countdownValue{font-variant-numeric:tabular-nums;letter-spacing:.3px}.orderCard.expired{opacity:.65}.orderCard.expired .countdownValue{color:#ff8c9a}
+/* Premium responsive layer */
+html,body{width:100%;max-width:100%;overflow-x:hidden}body{overscroll-behavior-x:none}.wrap,.top,.hero,.panel,.products{min-width:0;max-width:100%}.modal{padding:max(10px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));overflow:auto;place-items:center}.modal .box{width:min(430px,calc(100vw - 20px));max-width:100%;max-height:min(88dvh,760px);overflow:auto;overscroll-behavior:contain;padding:clamp(17px,4vw,24px);animation:premiumPop .34s cubic-bezier(.2,.8,.2,1)}.historyBox{width:min(900px,calc(100vw - 20px))!important;max-width:100%;max-height:88dvh!important}.historyScroll{max-height:70dvh!important;overflow:auto;-webkit-overflow-scrolling:touch}.products{overflow:visible}.product{min-width:0}.product .pbody{min-width:0}.product button{max-width:100%}.toast{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:min(390px,calc(100vw - 20px));max-width:calc(100vw - 20px)}@keyframes premiumPop{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:none}}@media(max-width:650px){.wrap{padding:11px}.top{gap:8px}.top .logo{font-size:21px}.hero{padding:15px}.panel{padding:14px}.modal .box{border-radius:19px}.historyGrid{grid-template-columns:1fr}.orders{overflow:auto}.orders table{min-width:620px}}@media(max-width:420px){.products{grid-template-columns:1fr 1fr!important;gap:9px}.product img{height:120px}.pbody{padding:10px}.price{font-size:17px}.btn{padding:10px 11px}.top{align-items:center}.userbox{max-width:45%}.auth .box{padding:21px}.methodCard{padding:12px}}
+
+/* SAKIB X PANEL — premium balance/header */
+.balancePremium{
+  display:flex!important;
+  align-items:center;
+  gap:9px;
+  min-width:158px;
+  height:58px;
+  padding:7px 10px!important;
+  border:1px solid rgba(124,92,255,.58)!important;
+  border-radius:17px!important;
+  background:linear-gradient(135deg,rgba(24,20,53,.98),rgba(12,18,29,.98))!important;
+  box-shadow:0 8px 28px rgba(72,48,180,.20), inset 0 1px 0 rgba(255,255,255,.07);
+  white-space:nowrap;
+}
+.balanceIcon{
+  width:35px;height:35px;flex:0 0 35px;
+  display:grid;place-items:center;
+  border-radius:11px;
+  background:linear-gradient(135deg,#33245f,#171c2d);
+  font-size:19px;
+}
+.balanceText{display:flex;flex-direction:column;align-items:flex-start;line-height:1.05;min-width:62px}
+.balanceLabel{font-size:12px;color:#aeb8cc;font-weight:700;letter-spacing:.1px}
+.balanceAmount{font-size:18px;color:#fff;margin-top:4px;letter-spacing:.2px}
+.balancePlus{
+  width:31px;height:31px;flex:0 0 31px;
+  display:grid;place-items:center;
+  margin-left:auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,#7c5cff,#a14cff);
+  color:#fff;font-size:22px;font-weight:900;
+  box-shadow:0 4px 16px rgba(124,92,255,.38);
+}
+@media (min-width:721px){
+  .top{align-items:center}
+  .userbox{justify-content:flex-end}
+}
+@media (max-width:720px){
+  .wrap{padding:10px 8px}
+  .top{display:flex;align-items:flex-start;flex-wrap:wrap;gap:9px;margin-bottom:16px}
+  .top>div:first-child{flex:1 1 100%;min-width:0}
+  .logo{font-size:22px}
+  .userbox{width:100%;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+  .userbox>div:first-child{display:none}
+  .balancePremium{order:1;min-width:145px;height:52px}
+  .balanceIcon{width:31px;height:31px;flex-basis:31px;font-size:17px}
+  .balanceAmount{font-size:16px}
+  .balancePlus{width:27px;height:27px;flex-basis:27px;font-size:19px}
+  #myOrdersBtn{order:2;padding:10px 12px!important}
+  #avatar{order:3}
+}
+
+.balancePlus{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.balancePlus:hover{transform:scale(1.08);box-shadow:0 6px 20px rgba(124,92,255,.48)}
+.balancePlus:active{transform:scale(.94)}
+
+/* All APK shortcut */
+.allApkBtn{border:1px solid #ff334d!important;background:linear-gradient(135deg,#e11d32,#ff304f)!important;color:#fff!important;border-radius:11px;padding:11px 15px;font-weight:900;cursor:pointer;box-shadow:0 7px 22px rgba(255,40,70,.22);white-space:nowrap;transition:transform .16s ease,box-shadow .16s ease}.allApkBtn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(255,40,70,.34)}.allApkBtn:active{transform:scale(.97)}@media(max-width:720px){.allApkBtn{order:0;padding:10px 12px}}
+</style></head><body>
+<noscript><div style="padding:30px;color:#fff;background:#070a10;font-family:system-ui">JavaScript is required to use SAKIB X PANEL.</div></noscript><div id="startupError" class="hidden" style="position:fixed;inset:0;z-index:20000;display:grid;place-items:center;padding:20px;background:#070a10;color:#fff;font-family:system-ui"><div style="max-width:520px;padding:24px;border:1px solid #334;border-radius:18px;background:#111722"><h2 style="margin-top:0">SAKIB X PANEL could not start</h2><p id="startupErrorText" style="color:#ff9bb0"></p><p style="color:#9aa6ba;font-size:13px">Run this folder from a local HTTP server (for example VS Code Live Server) instead of opening the HTML with <code>file://</code>.</p></div></div><div id="authScreen" class="auth"><div class="box"><div class="logo">SAKIB X PANEL</div><div class="sub" style="margin-top:7px">Firebase account login</div><label>Email / Gmail</label><input id="email" type="email" autocomplete="email" placeholder="you@gmail.com"><label>Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Minimum 6 characters"><div style="display:flex;justify-content:flex-end;margin-top:7px"><button id="forgotBtn" type="button" style="border:0;background:none;color:#b9a7ff;cursor:pointer;font-weight:700;padding:3px 0">Forgot password?</button></div><button id="authBtn" class="btn" style="width:100%;margin-top:12px">Sign in</button><button id="modeBtn" class="btn secondary" style="width:100%;margin-top:10px">Create account</button><div style="display:flex;align-items:center;gap:10px;margin:16px 0;color:#7f8aa0;font-size:12px"><span style="height:1px;background:#263044;flex:1"></span><span>OR</span><span style="height:1px;background:#263044;flex:1"></span></div><button id="googleBtn" class="btn googleBtn" style="width:100%;background:#fff;color:#202124;border:1px solid #dadce0;box-shadow:0 8px 25px #0003">🌐 Continue with Google</button><div id="authMsg"></div><p class="muted" style="font-size:12px;margin-top:16px">New accounts receive a Firebase verification link by email. You must verify before signing in.</p></div></div>
+<div id="app" class="hidden"><div class="wrap"><header class="top"><div><div class="logo">SAKIB X PANEL</div><div class="muted">Firebase-powered storefront</div></div><div class="userbox"><div><b id="userEmail"></b><div class="muted" style="font-size:12px">Account</div></div><button id="allApkBtn" class="allApkBtn" type="button" aria-label="All APK">📱 All APK</button><div class="balanceChip balancePremium" title="Your current balance">
+  <div class="balanceIcon">💰</div>
+  <div class="balanceText">
+    <span class="balanceLabel">Balance</span>
+    <b class="balanceAmount">৳<span id="userBalance">0</span></b>
+  </div>
+  <span class="balancePlus" id="balancePlus" role="button" aria-label="Add money">+</span>
+</div><button id="myOrdersBtn" class="btn secondary">📦 My Orders</button><div class="avatar" id="avatar">U</div></div></header>
+<section class="hero"><h1 style="margin:0 0 8px">Welcome to SAKIB X PANEL</h1><div class="muted">Products and categories are loaded live from Firebase.</div></section>
+<div id="cats" class="cats"></div><div id="products" class="products"></div>
+</div></div><div id="orderModal" class="modal hidden"><div class="box"><div class="logo">Place <b>Order</b></div><div class="sub" id="orderProductName" style="margin-top:6px"></div><label>Choose duration / plan</label><select id="orderPlan"></select><label>Quantity</label><input id="orderQty" type="number" min="1" value="1"><div class="panel" style="margin-top:14px"><div class="row"><span class="muted">Available balance</span><b>৳<span id="orderBalance">0</span></b></div><div class="row" style="margin-top:8px"><span class="muted">Order total</span><b>৳<span id="orderTotal">0</span></b></div></div><div style="display:flex;gap:10px;margin-top:16px"><button id="orderCancel" class="btn secondary" style="flex:1">Cancel</button><button id="placeOrder" class="btn" style="flex:1">Confirm Order</button></div><div id="orderMsg"></div></div></div><div id="topupModal" class="modal hidden"><div class="box"><div class="logo">Add <b>Money</b></div><div class="sub" style="margin-top:6px">Secure manual top-up</div><div id="topupStep1"><div style="margin-top:15px"><span class="stepDot active">1</span><b>Amount</b></div><label>Amount</label><input id="topupAmount" type="number" min="1" placeholder="Enter amount"><div style="display:flex;gap:10px;margin-top:16px"><button id="topupCancel" class="btn secondary" style="flex:1">Cancel</button><button id="topupNext" class="btn green" style="flex:1">Next</button></div></div><div id="topupStep2" class="hidden"><div style="margin-top:15px"><span class="stepDot active">2</span><b>Select payment method</b></div><div class="muted" style="margin-top:8px">Choose bKash or Nagad, then tap Next.</div><div id="paymentMethods" style="display:grid;gap:10px;margin-top:14px"></div><div style="display:flex;gap:10px;margin-top:16px"><button id="topupBack" class="btn secondary" style="flex:1">Back</button><button id="paymentNext" class="btn green" style="flex:1">Next</button></div></div><div id="topupStep3" class="hidden"><div style="margin-top:15px"><span class="stepDot active">3</span><b>Send Money & Verify</b></div><div id="paymentInfo" class="panel" style="margin-top:14px"></div><label>Transaction ID</label><input id="topupTxn" placeholder="Enter transaction ID"><div class="muted" style="margin-top:8px;font-size:12px">Send the exact amount, then enter the Transaction ID and submit for admin verification.</div><div style="display:flex;gap:10px;margin-top:16px"><button id="topupDetailBack" class="btn secondary" style="flex:1">Back</button><button id="topupVerify" class="btn green" style="flex:1">Verify & Submit</button></div></div><div id="topupMsg"></div></div></div><div id="historyModal" class="modal hidden"><div class="box historyBox"><div class="row"><div><div class="logo">My <b>Orders</b></div><div class="muted" style="margin-top:5px">Your complete order history</div></div><button id="historyClose" class="btn secondary">Close</button></div><div class="historyScroll"><div id="myOrders" class="historyGrid"></div></div></div></div><div id="toast" class="toast hidden"></div>
+<div id="profileModal" class="modal hidden">
+  <div class="box profileBox">
+    <div class="profileTop">
+      <div>
+        <div class="profileAvatar" id="profileAvatar">N</div>
+      </div>
+      <button id="profileClose" class="profileClose" type="button">×</button>
+    </div>
+    <div class="profileTitle">Account Details</div>
+    <div class="profileSub">Your SAKIB X PANEL account</div>
+    <div class="profileDetails">
+      <div class="profileDetail"><span>👤 Name</span><b id="profileName">-</b></div>
+      <div class="profileDetail"><span>✉️ Email</span><b id="profileEmail">-</b></div>
+      <div class="profileDetail"><span>💰 Balance</span><b id="profileBalance">৳0</b></div>
+      <div class="profileDetail"><span>🟢 Status</span><b id="profileStatus">Active</b></div>
+    </div>
+    <button id="profileLogout" class="btn danger profileLogout" type="button">↪ Logout</button>
+  </div>
+</div>
+<div id="resetModal" class="modal hidden"><div class="box"><div class="logo">SAKIB X PANEL</div><div class="sub" style="margin-top:6px">Set a new password</div><div id="resetStatus" class="msg ok" style="margin-top:14px">Your email was verified. Choose a new password.</div><label>New password</label><input id="newPassword" type="password" autocomplete="new-password" placeholder="Minimum 6 characters"><label>Confirm password</label><input id="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your new password"><div style="display:flex;gap:10px;margin-top:16px"><button id="resetCancel" class="btn secondary" style="flex:1">Cancel</button><button id="resetSave" class="btn" style="flex:1">Set new password</button></div></div></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script><script src="firebase-config.js"></script>
+<script>
+try{if(!window.firebaseConfig)throw new Error('Firebase configuration could not be loaded.');if(!window.firebase||!firebase.initializeApp)throw new Error('Firebase SDK could not be loaded.');firebase.initializeApp(window.firebaseConfig);}catch(e){document.getElementById('startupError').classList.remove('hidden');document.getElementById('startupErrorText').textContent=e.message||String(e);throw e;}const auth=firebase.auth(),db=firebase.database();let mode='login',cat='All',products={},categories={};
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(()=>{});
+const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function showMsg(t,ok=false){$('authMsg').innerHTML='<div class="msg '+(ok?'ok':'err')+'">'+esc(t)+'</div>'}function errorText(e){return ({'auth/invalid-email':'Enter a valid email.','auth/email-already-in-use':'This email is already registered.','auth/weak-password':'Password must be at least 6 characters.','auth/invalid-credential':'Invalid email or password.','auth/user-not-found':'Account not found.','auth/wrong-password':'Invalid email or password.','auth/too-many-requests':'Too many attempts. Try again later.','auth/network-request-failed':'Network error. Check your internet.'}[e.code]||e.message||'Authentication error.')}
+async function signIn(){const e=$('email').value.trim(),p=$('password').value;if(!e||!p)return showMsg('Email and password are required.');try{const c=await auth.signInWithEmailAndPassword(e,p);if(!c.user.emailVerified){await auth.signOut();return showMsg('Please open the verification link sent to your email, then sign in again.')}showMsg('Login successful.',true)}catch(x){showMsg(errorText(x))}}
+
+async function forgotPassword(){const e=$('email').value.trim();if(!e)return showMsg('Enter your Gmail/email first, then tap Forgot password.');try{const base=window.location.href.split('?')[0].split('#')[0];const settings=(/^https?:$/.test(location.protocol))?{url:base+'?reset=1',handleCodeInApp:true}:undefined;await auth.sendPasswordResetEmail(e,settings);showMsg('Password reset link sent to '+e+'. Open the email, verify/reset it, then you can set a new password here.',true);toast('📩 Password reset link sent','success')}catch(x){showMsg(errorText(x));toast('⚠️ '+errorText(x),'error')}}
+async function handleResetLink(){const params=new URLSearchParams(location.search);const modeParam=params.get('mode'),oob=params.get('oobCode');if(modeParam!=='resetPassword'||!oob)return;try{const email=await auth.verifyPasswordResetCode(oob);$('resetStatus').textContent='Verified for '+email+'. Set your new password below.';$('resetModal').classList.remove('hidden');window.resetOobCode=oob}catch(x){$('resetStatus').className='msg err';$('resetStatus').textContent='This reset link is invalid or expired. Please request a new one.';$('resetModal').classList.remove('hidden');window.resetOobCode=null}}
+async function confirmReset(){const p=$('newPassword').value,c=$('confirmPassword').value;if(!window.resetOobCode)return toast('❌ Invalid or expired reset link','error');if(p.length<6)return toast('🔐 Password must be at least 6 characters','error');if(p!==c)return toast('⚠️ Passwords do not match','error');try{await auth.confirmPasswordReset(window.resetOobCode,p);$('resetModal').classList.add('hidden');history.replaceState({},document.title,location.pathname);$('password').value=p;showMsg('Password changed successfully. You can sign in now.',true);toast('✓ Password changed successfully','success')}catch(x){toast('❌ '+errorText(x),'error')}}
+async function signInWithGoogle(){try{const provider=new firebase.auth.GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});const c=await auth.signInWithPopup(provider);const u=c.user;await db.ref('users/'+u.uid).update({email:u.email||'',name:u.displayName||((u.email||'user').split('@')[0]),username:u.displayName||((u.email||'user').split('@')[0]),photoURL:u.photoURL||'',status:'Active',lastLoginAt:Date.now()});showMsg('Google login successful.',true)}catch(x){if(x.code!=='auth/popup-closed-by-user')showMsg(errorText(x))}}
+async function signUp(){const e=$('email').value.trim(),p=$('password').value;if(!e||!p)return showMsg('Email and password are required.');if(p.length<6)return showMsg('Password must be at least 6 characters.');try{const c=await auth.createUserWithEmailAndPassword(e,p);await db.ref('users/'+c.user.uid).set({email:e,name:e.split('@')[0],balance:0,status:'Active',createdAt:Date.now()});await c.user.sendEmailVerification();await auth.signOut();showMsg('Account created. A verification link was sent to '+e+'. Open it, then sign in.',true)}catch(x){showMsg(errorText(x))}}
+$('resetSave').onclick=confirmReset;$('resetCancel').onclick=()=>{ $('resetModal').classList.add('hidden'); };$('authBtn').onclick=()=>mode==='login'?signIn():signUp();$('forgotBtn').onclick=forgotPassword;$('googleBtn').onclick=signInWithGoogle;$('modeBtn').onclick=()=>{mode=mode==='login'?'signup':'login';$('authBtn').textContent=mode==='login'?'Sign in':'Create account';$('modeBtn').textContent=mode==='login'?'Create account':'Back to sign in';$('authMsg').innerHTML=''};
+function toast(t,type='info'){const el=$('toast');const icon=type==='success'?'✓':type==='error'?'!':'i';el.innerHTML='<span class="ico">'+icon+'</span><span class="ttext">'+esc(t)+'</span><button class="close" aria-label="Close">×</button><span class="bar"></span>';el.classList.remove('hidden');el.querySelector('.close').onclick=()=>el.classList.add('hidden');clearTimeout(window.tt);window.tt=setTimeout(()=>el.classList.add('hidden'),2600)}
+function loadCatalog(){db.ref('categories').on('value',s=>{categories=s.val()||{};renderCats()});db.ref('products').on('value',s=>{products=s.val()||{};renderProducts()})}
+function renderCats(){let arr=Object.entries(categories).map(([id,v])=>({id,...v})).filter(x=>x.active!==false);$('cats').innerHTML='<button class="cat '+(cat==='All'?'active':'')+'" onclick="setCat(\'All\')">All</button>'+arr.map(x=>'<button class="cat '+(cat===x.name?'active':'')+'" onclick="setCat('+JSON.stringify(x.name)+')">'+esc(x.name)+'</button>').join('')}
+function setCat(x){cat=x;renderCats();renderProducts()}
+function renderProducts(){let arr=Object.entries(products).map(([id,v])=>({id,...v})).filter(x=>x.active!==false&&(cat==='All'||x.category===cat));$('products').innerHTML=arr.length?arr.map(p=>'<article class="product"><img src="'+esc(p.image||'https://placehold.co/600x400/101722/ffffff?text=Product')+'" onerror="this.src=\'https://placehold.co/600x400/101722/ffffff?text=Product\'"><div class="pbody"><div class="row"><span class="tag">'+esc(p.category||'General')+'</span><span class="muted">Stock '+Number(p.stock||0)+'</span></div><h3 style="margin:10px 0 0">'+esc(p.name||'Product')+'</h3><div class="price">৳'+Number(p.price||0).toLocaleString()+'</div><button class="btn" style="width:100%" onclick="buy(\''+p.id+'\')" '+(Number(p.stock||0)<=0?'disabled':'')+'>Order now</button></div></article>').join(''):'<div class="empty" style="grid-column:1/-1">No products in this category.</div>'}
+function getPlans(p){
+  if(!p) return [];
+  if(p.plans && typeof p.plans==='object') return Object.entries(p.plans).map(([id,v])=>({id,...v})).filter(x=>Number(x.days)>0&&Number(x.price)>=0).sort((a,b)=>Number(a.days)-Number(b.days));
+  return [{id:'default',days:Number(p.defaultDays||30),price:Number(p.price||0)}];
+}
+let selectedProductId=null;
+let topupAmountValue=0, selectedPaymentMethod='';
+function openTopup(){ $('topupAmount').value=''; $('topupTxn').value=''; $('topupMsg').innerHTML=''; selectedPaymentMethod=''; $('topupStep1').classList.remove('hidden'); $('topupStep2').classList.add('hidden'); $('topupStep3').classList.add('hidden'); $('paymentMethods').innerHTML=''; $('paymentInfo').innerHTML=''; $('topupModal').classList.remove('hidden'); }
+$('balancePlus').onclick=openTopup; $('balancePlus').style.cursor='pointer'; $('addMoneyBtn')?.addEventListener('click',openTopup);$('myOrdersBtn').onclick=()=>{ $('historyModal').classList.remove('hidden'); };$('historyClose').onclick=()=>$('historyModal').classList.add('hidden');$('walletTopupBtn')?.addEventListener('click',openTopup);$('topupCancel').onclick=()=>$('topupModal').classList.add('hidden');
+$('topupNext').onclick=async()=>{const amount=Number($('topupAmount').value||0);if(!Number.isFinite(amount)||amount<1){$('topupMsg').innerHTML='<div class="msg err">Enter a valid amount.</div>';return}topupAmountValue=amount;const snap=await db.ref('paymentSettings').once('value');const cfg=snap.val()||{};const methods=[['bkash','bKash',cfg.bkashNumber||'Not configured',cfg.bkashInstruction||'Send Money to the bKash number shown below.'],['nagad','Nagad',cfg.nagadNumber||'Not configured',cfg.nagadInstruction||'Send Money to the Nagad number shown below.']];$('paymentMethods').innerHTML=methods.map(([id,name,num])=>'<button type="button" class="methodCard" data-pay="'+id+'">💳 <b>'+name+'</b><span class="muted" style="display:block;margin-top:5px">Send Money • '+esc(num)+'</span></button>').join('');document.querySelectorAll('[data-pay]').forEach(b=>b.onclick=()=>{selectedPaymentMethod=b.dataset.pay;document.querySelectorAll('[data-pay]').forEach(x=>x.classList.toggle('active',x===b));$('topupMsg').innerHTML=''});$('topupStep1').classList.add('hidden');$('topupStep2').classList.remove('hidden');};
+$('paymentNext').onclick=async()=>{if(!selectedPaymentMethod){$('topupMsg').innerHTML='<div class="msg err">Select bKash or Nagad first.</div>';return}const cfg=(await db.ref('paymentSettings').once('value')).val()||{};const method=selectedPaymentMethod==='bkash'?'bKash':'Nagad';const num=selectedPaymentMethod==='bkash'?(cfg.bkashNumber||'Not configured'):(cfg.nagadNumber||'Not configured');const ins=selectedPaymentMethod==='bkash'?(cfg.bkashInstruction||'Send Money to the number below.'):(cfg.nagadInstruction||'Send Money to the number below.');$('paymentInfo').innerHTML='<div class="muted">'+esc(method)+' Send Money number</div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:7px 0"><div style="font-size:25px;font-weight:900">'+esc(num)+'</div><button type="button" class="btn secondary" id="copyPaymentNumber">📋 Copy Number</button></div><div class="muted" style="line-height:1.6">'+esc(ins)+'</div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:10px"><span>Send amount: <b>৳'+topupAmountValue.toLocaleString()+'</b></span><button type="button" class="btn secondary" id="copyPaymentAmount">📋 Copy Amount</button></div>';$('copyPaymentNumber').onclick=()=>copyPaymentText(num);$('copyPaymentAmount').onclick=()=>copyPaymentText(String(topupAmountValue));$('topupStep2').classList.add('hidden');$('topupStep3').classList.remove('hidden');};
+window.copyPaymentText=async text=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(String(text));}else{const ta=document.createElement('textarea');ta.value=String(text);ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');ta.remove();}toast('✓ Copied to clipboard','success')}catch(e){toast('Could not copy. Please copy manually.','error')}};
+$('topupBack').onclick=()=>{$('topupStep2').classList.add('hidden');$('topupStep1').classList.remove('hidden')};$('topupDetailBack').onclick=()=>{$('topupStep3').classList.add('hidden');$('topupStep2').classList.remove('hidden')};
+$('topupVerify').onclick=async()=>{const txn=$('topupTxn').value.trim();if(!selectedPaymentMethod)return $('topupMsg').innerHTML='<div class="msg err">Select bKash or Nagad first.</div>';if(!txn)return $('topupMsg').innerHTML='<div class="msg err">Enter the transaction ID.</div>';const u=auth.currentUser;if(!u)return;try{const method=selectedPaymentMethod==='bkash'?'bKash':'Nagad';await db.ref('topupRequests').push({userId:u.uid,email:u.email||'',amount:topupAmountValue,method,transactionId:txn,status:'Processing',createdAt:Date.now()});$('topupModal').classList.add('hidden');toast('⏳ Top-up submitted • Processing','success')}catch(e){$('topupMsg').innerHTML='<div class="msg err">'+esc(e.message||'Could not submit request')+'</div>';toast('⚠️ Could not submit top-up','error')}};
+function refreshOrderTotal(){const p=products[selectedProductId];if(!p)return;const plans=getPlans(p);const plan=plans[$('orderPlan').selectedIndex]||plans[0];const q=Math.max(1,Number($('orderQty').value||1));$('orderTotal').textContent=(Number(plan.price)*q).toLocaleString();const u=auth.currentUser;db.ref('users/'+u.uid).once('value').then(s=>{$('orderBalance').textContent=Number(s.val()?.balance||0).toLocaleString()})}
+$('orderPlan').onchange=refreshOrderTotal;$('orderQty').oninput=refreshOrderTotal;$('orderCancel').onclick=()=>$('orderModal').classList.add('hidden');
+async function buy(id){const p=products[id];if(!p)return;if(Number(p.stock||0)<=0)return toast('Out of stock','error');selectedProductId=id;const plans=getPlans(p);$('orderProductName').textContent=(p.name||'Product')+' • Stock '+Number(p.stock||0);$('orderPlan').innerHTML=plans.map(x=>'<option value="'+esc(x.id)+'">'+esc(x.days)+' days — ৳'+Number(x.price).toLocaleString()+'</option>').join('');$('orderQty').value=1;$('orderMsg').innerHTML='';$('orderModal').classList.remove('hidden');refreshOrderTotal()}
+$('placeOrder').onclick=async()=>{const p=products[selectedProductId];if(!p)return;const plans=getPlans(p),plan=plans[$('orderPlan').selectedIndex]||plans[0],q=Number($('orderQty').value||0);if(!Number.isInteger(q)||q<1)return $('orderMsg').innerHTML='<div class="msg err">Enter a valid quantity.</div>';if(q>Number(p.stock||0))return $('orderMsg').innerHTML='<div class="msg err">Not enough stock.</div>';const total=Number(plan.price)*q,uid=auth.currentUser.uid;try{const userSnap=await db.ref('users/'+uid).once('value'),user=userSnap.val()||{},balance=Number(user.balance||0);if(balance<total){$('orderModal').classList.add('hidden');toast(`💰 Balance ৳${balance.toLocaleString()} • Need ৳${total.toLocaleString()} — please top up first.`,'error');setTimeout(()=>openTopup(),500);return}const ref=db.ref('orders').push(),updates={};updates['/orders/'+ref.key]={userId:uid,customer:auth.currentUser.email,items:[{productId:selectedProductId,name:p.name,price:Number(plan.price),quantity:q,days:Number(plan.days)}],amount:total,planDays:Number(plan.days),subscriptionDays:Number(plan.days),status:'Pending',createdAt:Date.now()};updates['/users/'+uid+'/balance']=balance-total;await db.ref().update(updates);$('userBalance').textContent=(balance-total).toLocaleString();$('orderModal').classList.add('hidden');toast(`✓ Order placed for ${plan.days} days`,'success')}catch(e){$('orderMsg').innerHTML='<div class="msg err">'+esc(e.message||'Could not place order')+'</div>'}};
+function formatCountdown(ms){
+  ms=Math.max(0,Number(ms)||0);
+  const total=Math.floor(ms/1000);
+  const days=Math.floor(total/86400);
+  const hours=Math.floor((total%86400)/3600);
+  const minutes=Math.floor((total%3600)/60);
+  const seconds=total%60;
+  return `${days}d ${String(hours).padStart(2,'0')}h ${String(minutes).padStart(2,'0')}m ${String(seconds).padStart(2,'0')}s`;
+}
+function updateOrderCountdowns(){
+  const now=Date.now();
+  document.querySelectorAll('[data-countdown-exp]').forEach(el=>{
+    const exp=Number(el.dataset.countdownExp||0);
+    const fallback=Number(el.dataset.fallbackMs||0);
+    const remaining=exp?exp-now:fallback;
+    const value=el.querySelector('.countdownValue');
+    if(value) value.textContent=remaining>0?formatCountdown(remaining):'Expired';
+    if(remaining<=0 && exp){
+      const card=el.closest('.orderCard');
+      if(card) card.classList.add('expired');
+    }
+  });
+}
+setInterval(updateOrderCountdowns,1000);
+handleResetLink();
+const profileModal=$('profileModal');
+function openProfile(){
+  const u=auth.currentUser;
+  if(!u)return;
+  const name=($('userEmail').textContent||u.email||'Account').split(' • ')[0];
+  $('profileName').textContent=name;
+  $('profileEmail').textContent=u.email||'-';
+  $('profileBalance').textContent='৳'+Number($('userBalance').textContent||0).toLocaleString();
+  $('profileAvatar').textContent=(name||u.email||'U')[0].toUpperCase();
+  profileModal.classList.remove('hidden');
+}
+$('avatar').onclick=openProfile;
+$('profileClose').onclick=()=>profileModal.classList.add('hidden');
+$('profileLogout').onclick=()=>{profileModal.classList.add('hidden');auth.signOut();};
+profileModal.addEventListener('click',e=>{if(e.target===profileModal)profileModal.classList.add('hidden')});
+auth.onAuthStateChanged(u=>{
+  if(u && u.emailVerified){
+    $('authScreen').classList.add('hidden');$('app').classList.remove('hidden');
+    $('userEmail').textContent=u.email||'Account';$('avatar').textContent=(u.email||'U')[0].toUpperCase();
+    if(window.__userRef) window.__userRef.off();
+    if(window.__ordersRef) window.__ordersRef.off();
+    window.__userRef=db.ref('users/'+u.uid);
+    window.__ordersRef=db.ref('orders').orderByChild('userId').equalTo(u.uid);
+    window.__userRef.on('value',s=>{const v=s.val()||{};const name=v.username||v.name||(u.email||'user').split('@')[0];$('userEmail').textContent=name+' • '+(u.email||'');$('userBalance').textContent=Number(v.balance||0).toLocaleString();$('profileName').textContent=name;$('profileEmail').textContent=u.email||'-';$('profileBalance').textContent='৳'+Number(v.balance||0).toLocaleString();$('profileStatus').textContent=v.status||'Active';$('profileAvatar').textContent=(name||u.email||'U')[0].toUpperCase()});
+    loadCatalog();
+    window.__ordersRef.on('value',s=>{
+      const now=Date.now();
+      const arr=Object.entries(s.val()||{}).map(([id,v])=>({id,...v}))
+        .filter(x=>x.demo!==true&&x.isDemo!==true)
+        .filter(x=>{const exp=Number(x.expiresAt||0); return !exp || exp>now;})
+        .sort((a,b)=>Number(b.createdAt||0)-Number(a.createdAt||0));
+      $('myOrders').innerHTML=arr.length?arr.map(x=>{
+        const exp=Number(x.expiresAt||0);
+        const planDays=Number(x.subscriptionDays||x.planDays||x.items?.[0]?.days||0);
+        const countdown=exp?formatCountdown(exp-now):formatCountdown(planDays*86400000);
+        const status=x.status||'Pending';
+        return `<article class="orderCard"><div class="ocHead"><div><div class="ocTitle">${esc(x.items?.[0]?.name||'Order')}</div><div class="ocId">Order #${esc(x.id.slice(0,10))}</div></div><span class="status">${esc(status)}</span></div><div class="ocGrid"><div class="ocItem"><div class="ocLabel">Total</div><div class="ocValue">৳${Number(x.amount||0).toLocaleString()}</div></div><div class="ocItem"><div class="ocLabel">Quantity</div><div class="ocValue">${Number(x.items?.[0]?.quantity||1)}</div></div><div class="ocItem"><div class="ocLabel">Plan</div><div class="ocValue">${esc(planDays||'-')} days</div></div><div class="ocItem countdownItem" data-countdown-exp="${exp}" data-fallback-ms="${planDays*86400000}"><div class="ocLabel">⏳ Time left</div><div class="ocValue countdownValue">${esc(countdown)}</div></div><div class="ocItem"><div class="ocLabel">Expires</div><div class="ocValue">${exp?new Date(exp).toLocaleString():'-'}</div></div></div><div class="access"><div class="accessRow"><span>👤 User</span><b>${esc(x.accessUser||'Not assigned')}</b></div><div class="accessRow"><span>🔑 Key</span><b>${esc(x.accessKey||'Not assigned')}</b></div></div></article>`
+      }).join(''):'<div class="historyEmpty">📦 No active orders yet.<br><span style="font-size:12px">Expired orders are automatically removed from this history.</span></div>';
+    });
+  } else {
+    if(window.__userRef) window.__userRef.off(); if(window.__ordersRef) window.__ordersRef.off();
+    $('app').classList.add('hidden');$('authScreen').classList.remove('hidden');
+  }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('allApkBtn');if(b)b.addEventListener('click',function(){window.location.href='https://mdsakibkhan382900x-art.github.io/dawnlod/#';});});
+</script>
+</body></html>
+<style>
+/* SAKIB X PANEL - mobile header/layout fix */
+@media (max-width:650px){
+  .top{display:flex;flex-direction:column;align-items:stretch!important;width:100%;gap:10px}
+  .top>div:first-child{width:100%;min-width:0}
+  .logo{white-space:normal;word-break:normal;overflow-wrap:normal;line-height:1.05}
+  .top .logo{font-size:23px;max-width:none;display:block}
+  .userbox{width:100%;max-width:none;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:7px;min-width:0}
+  .userbox>div:first-child{display:none}
+  .userbox .balanceChip{flex:0 0 auto;padding:8px 10px;font-size:12px}
+  .userbox .btn{flex:0 0 auto;padding:9px 11px;font-size:12px;max-width:none;white-space:nowrap}
+  .userbox .avatar{flex:0 0 36px;width:36px;height:36px}
+  .hero h1{font-size:24px;line-height:1.15;overflow-wrap:anywhere}
+  .hero p{line-height:1.4}
+  .cats{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px;scrollbar-width:none}
+  .cats::-webkit-scrollbar{display:none}
+  .cat{flex:0 0 auto}
+  .product{min-width:0}
+  .product img{display:block;max-width:100%}
+  .pbody{min-width:0}
+  .pbody>*{max-width:100%;overflow-wrap:anywhere}
+  .pbody .btn{width:100%;min-width:0}
+}
+@media (max-width:390px){
+  .wrap{padding:9px}
+  .top .logo{font-size:21px}
+  .userbox{gap:6px}
+  .userbox .balanceChip{padding:8px 9px}
+  .userbox .btn{padding:8px 9px}
+  .userbox .avatar{width:34px;height:34px;flex-basis:34px}
+  .products{grid-template-columns:1fr 1fr!important;gap:8px}
+  .product img{height:105px}
+  .pbody{padding:9px}
+  .price{font-size:16px}
+}
+</style>
+
+<style>
+.profileBox{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(18,24,38,.98),rgba(15,18,31,.98))!important}
+.profileBox:before{content:"";position:absolute;inset:-45% 35% auto -25%;height:180px;background:radial-gradient(circle,rgba(124,92,255,.32),transparent 65%);pointer-events:none}
+.profileTop{display:flex;align-items:center;justify-content:space-between;position:relative}
+.profileAvatar{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,#7c5cff,#19c995);font-size:25px;font-weight:900;box-shadow:0 14px 35px rgba(124,92,255,.28)}
+.profileClose{width:38px;height:38px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.06);color:#fff;font-size:24px;cursor:pointer;transition:.2s}
+.profileClose:hover{transform:rotate(90deg);background:rgba(255,255,255,.11)}
+.profileTitle{font-size:24px;font-weight:900;margin-top:18px;position:relative}
+.profileSub{color:var(--muted);margin-top:5px;font-size:12px;position:relative}
+.profileDetails{display:grid;gap:9px;margin-top:18px}
+.profileDetail{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px 14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);border-radius:14px;min-width:0}
+.profileDetail span{color:#aeb8c9;flex:0 0 auto}.profileDetail b{max-width:62%;text-align:right;overflow-wrap:anywhere}
+.profileLogout{width:100%;margin-top:16px;padding:13px}
+@media(max-width:420px){.profileBox{padding:18px}.profileAvatar{width:56px;height:56px;border-radius:17px}.profileTitle{font-size:21px}.profileDetail{padding:11px 12px;font-size:12px}}
+</style>
+<style>
+/* Balance right-side mobile polish */
+@media(max-width:650px){
+  .top{align-items:stretch!important}
+  .userbox{justify-content:flex-end!important;gap:8px!important}
+  .userbox .balanceChip{order:1;min-width:112px!important;justify-content:center;padding:9px 12px!important;font-size:13px!important;font-weight:800;border-color:rgba(124,92,255,.45)!important;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(25,201,149,.10))!important;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .userbox .balanceChip b{font-size:14px!important;color:#9ff4d8!important;white-space:nowrap}
+  #myOrdersBtn{order:2}
+  #avatar{order:3;cursor:pointer;box-shadow:0 5px 18px rgba(124,92,255,.28)}
+}
+@media(max-width:390px){
+  .userbox{justify-content:flex-end!important;gap:6px!important}
+  .userbox .balanceChip{min-width:108px!important;padding:8px 9px!important}
+  .userbox .balanceChip b{font-size:13px!important}
+}
+</style>
